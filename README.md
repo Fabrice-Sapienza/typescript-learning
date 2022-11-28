@@ -1,6 +1,7 @@
 ## Description ✨
 
 This is a sample project that lets me practice TypeScript.
+
 Production URL: [https://typescript-learning-vert.vercel.app](https://typescript-learning-vert.vercel.app)
 
 ## Getting Started 🚀
