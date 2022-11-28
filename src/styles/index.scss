@@ -1,0 +1,22 @@
+@use 'reset';
+@use 'vars';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: vars.$primary;
+  background: vars.$background;
+  ::-moz-selection {
+    background: vars.$selection;
+  }
+
+  ::selection {
+    background: vars.$selection;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}

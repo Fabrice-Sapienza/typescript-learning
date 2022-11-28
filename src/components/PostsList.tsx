@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { PostData } from '../interfaces'
-import './postsList.css'
+import './postslist.scss'
 
 interface PostsListsProps {
   allPosts: PostData[] | null
@@ -11,9 +11,11 @@ const PostsList: React.FC<PostsListsProps> = ({ allPosts }) => {
   return (
     <ul className='posts'>
       {allPosts?.map((post) => (
-        <li key={post.id}>
-          <h2>{post.title}</h2>
-          <Link to={`/${post.id}`}>Lire l&apos;article</Link>
+        <li className='list' key={post.id}>
+          <h2 className='list-title'>{post.title}</h2>
+          <Link className='list-link' to={`/${post.id}`}>
+            👉 Lire l&apos;article 👈
+          </Link>
         </li>
       ))}
     </ul>

@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import React, { useEffect, useState } from 'react'
 import { PostData } from '../interfaces'
 import PostDetail from '../components/PostDetail'
-import './post.css'
+import './post.scss'
 
 type PostParams = {
   id: string
@@ -23,7 +23,7 @@ const Post = () => {
 
   return (
     <div className='post-container'>
-      <h1>Detail de la publication</h1>
+      <h1 className='post-container-title'>Detail de la publication</h1>
       <PostDetail onePost={onePost} />
     </div>
   )

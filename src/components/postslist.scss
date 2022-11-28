@@ -1,0 +1,32 @@
+@use '../../src/styles/vars';
+.posts {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+  flex-wrap: wrap;
+  .list {
+    width: 300px;
+    height: 200px;
+    background-color: vars.$color;
+    padding: vars.$gutter;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    &-title {
+      color: vars.$secondary;
+      text-align: center;
+    }
+    &-link {
+      font-weight: bold;
+      color: vars.$primary;
+      text-align: center;
+      margin-top: auto;
+    }
+  }
+}

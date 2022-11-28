@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PostsList from '../components/PostsList'
 import { PostData } from '../interfaces'
-import './posts.css'
+import './posts.scss'
 
 const Posts: React.FC = () => {
   const [allPosts, setAllPosts] = useState<PostData[] | null>(null)
@@ -27,10 +27,19 @@ const Posts: React.FC = () => {
 
   return (
     <div className='posts-container'>
-      <h1>Page principale</h1>
+      <h1 className='posts-container-title'>Page principale</h1>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <label htmlFor='posts'>Nombre de publication {numberOfPosts}</label>
-        <input type='range' min={1} max={20} onChange={handleChange} value={numberOfPosts} />
+        <label className='posts-container-label-range' htmlFor='posts'>
+          Nombre de publication {numberOfPosts}
+        </label>
+        <input
+          type='range'
+          min={1}
+          max={20}
+          onChange={handleChange}
+          value={numberOfPosts}
+          className='posts-container-input-range'
+        />
         <PostsList allPosts={allPosts} />
       </div>
     </div>

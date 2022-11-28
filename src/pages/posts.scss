@@ -1,0 +1,18 @@
+@use '../../src/styles/vars';
+.posts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: vars.$gutter;
+  &-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin: vars.$gutter auto;
+  }
+  &-input-range {
+    margin: vars.$gutter 0;
+  }
+  &-label-range {
+    font-size: 1.5rem;
+    cursor: text;
+  }
+}
